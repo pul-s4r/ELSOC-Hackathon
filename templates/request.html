@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Request Log</h1>
+
+<!-- <p style="white-space: pre;">{{ dish }}</p> -->
+
+<div>
+    <form method="POST">
+
+    <font size="3" color="red">{{message}}</font>
+
+    <table style="width:60%">
+    <tr>
+    <td>Client</td>
+    <td>Client #</td>
+    <td>Room Assigned?</td>
+    <td>Room #</td>
+    </tr>
+    {% for node in nodes %}
+    <tr>
+    <td>{{node}}</td>
+    <td>{{nodes[node][1]}}</td>
+    <td>{{nodes[node][2]|length}}</td>
+    <td>{{nodes[node][2]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    </form>
+</div>
+
+{% endblock %}

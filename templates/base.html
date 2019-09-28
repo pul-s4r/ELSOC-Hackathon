@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FindSpace</title>
+</head>
+
+<body>
+
+    <h1>FindSpace</h1>
+    <h3>Schneider Electric/ELSOC Hackathon</h3>
+
+    <!-- Tab Menu -->
+    <a href="{{ url_for('index') }}">Home</a>
+    <br> <a href="{{ url_for('nodes') }}">Node Manager</a>
+    <br> <a href="{{ url_for('nodes_add') }}">Add A Node</a>
+    <br> <a href="{{ url_for('nodes_delete') }}">Delete A Node</a>
+    <br> <a href="{{ url_for('request') }}">Request Log</a>
+    <br> <a href="{{ url_for('request_make') }}">Find me a Room</a>
+
+    <br>
+    <!-- Main Content -->
+    {% block body %}
+
+    {% endblock body %}
+
+</body>
+
+</html>

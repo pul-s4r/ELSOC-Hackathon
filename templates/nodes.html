@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Node Manager</h1>
+
+<!-- <p style="white-space: pre;">{{ dish }}</p> -->
+
+<div>
+    <form method="POST">
+
+    <font size="3" color="red">{{message}}</font>
+
+    <table style="width:40%">
+    {% for node in nodes %}
+    <tr>
+    <td>{{node}}</td>
+    <td>Sensor data - noise level</td>
+    <td>Assigned to (port)</td>
+    <td>Status</td>
+    <td><input type="submit" name="{{node}}_del" value="-"></td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <input type="submit" name="button_redirect_add_node" value="Add node">
+    </form>
+</div>
+
+{% endblock %}

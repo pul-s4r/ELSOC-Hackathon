@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Find Me a Room</h1>
+
+<!-- <p style="white-space: pre;">{{ dish }}</p> -->
+
+<div>
+    <form method="POST">
+
+    <font size="3" color="red">{{message}}</font>
+
+    <input name="client_name" value="Your Name"><br>
+
+    <input type="submit" name="button_add_node" value="Find Me a Room">
+    </form>
+</div>
+
+{% endblock %}

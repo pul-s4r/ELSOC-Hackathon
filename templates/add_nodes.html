@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Add a Node</h1>
+
+<!-- <p style="white-space: pre;">{{ dish }}</p> -->
+
+<div>
+    <form method="POST">
+
+    <font size="3" color="red">{{message}}</font>
+
+    <input name="roomname" value="New Room"><br>
+    <input name="serial_address" value="/dev/ttyACM1"><br>
+
+    <input type="submit" name="button_add_node" value="Add Node">
+    </form>
+</div>
+
+{% endblock %}
